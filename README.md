@@ -44,7 +44,7 @@ Start by cloning the repository to your local system:
 git clone https://github.com/your-repository/recommendation-service.git
 cd recommendation-service
 ```
-### **2. Create a virtual environment **
+### **2. Create a virtual environment**
 
 It's recommended to use a virtual environment to manage dependencies for your project:
 For Windows:
@@ -57,7 +57,7 @@ For macOS/Linux:
 python3 -m venv venv
 source venv/bin/activate
 ```
-### ** 3. Install dependencies **
+### **3. Install dependencies**
 Once inside the project folder and the virtual environment is activated, install the project dependencies:
 ```bash
 pip install -r requirements.txt
@@ -71,3 +71,10 @@ uvicorn app.main:app --reload
 ```
 
 The application will be available at [http://127.0.0.1:8000/docs].
+
+## **API Endpoints**
+
+### **GET /recommendations**
+-**Description:** Fetch personalized fashion recommendations with filters, sorting, and pagination.
+-**Query Parameters:**
+    -category (optional): Filter items by category (e.g., Shirts).
