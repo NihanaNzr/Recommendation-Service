@@ -60,7 +60,7 @@ source venv/bin/activate
 ### **3. Install dependencies**
 Once inside the project folder and the virtual environment is activated, install the project dependencies:
 ```bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 The requirements.txt file should include all necessary dependencies like fastapi, uvicorn, pytest, etc.
 
