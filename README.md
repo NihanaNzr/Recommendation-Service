@@ -74,7 +74,74 @@ The application will be available at [http://127.0.0.1:8000/docs].
 
 ## **API Endpoints**
 
-### **GET /recommendations**
--**Description:** Fetch personalized fashion recommendations with filters, sorting, and pagination.
--**Query Parameters:**
-    -category (optional): Filter items by category (e.g., Shirts).
+# GET /recommendations
+
+### Description:
+Fetch personalized fashion recommendations with filters, sorting, and pagination.
+
+### Query Parameters:
+
+- `category` (optional): Filter items by category (e.g., Shirts).
+- `price_min` (optional): Minimum price.
+- `price_max` (optional): Maximum price.
+- `size` (optional): Filter by size (e.g., L).
+- `color` (optional): Filter by color (e.g., Red).
+- `rating_min` (optional): Minimum rating.
+- `sort_by` (optional): Sort by field (e.g., price, rating).
+- `sort_order` (optional): Sort order (`asc` or `desc`).
+- `page` (optional): Page number for pagination.
+- `page_size` (optional): Number of items per page.
+
+---
+
+### Example Request:
+
+```bash
+curl -X GET "http://127.0.0.1:8000/recommendations?category=Shirts&price_min=20&price_max=100&sort_by=price&sort_order=asc&page=1&page_size=5"
+```
+
+### Example Response:
+
+```bash
+[
+  {
+    "id": "item_1",
+    "name": "Casual Shirt",
+    "category": "Shirts",
+    "price": 25.0,
+    "size": "M",
+    "color": "Blue",
+    "rating": 4.5
+  }
+]
+```
+# POST /events
+### Description:
+Logs user events such as clicks for recommendation analytics.
+
+### Request Body:
+```bash
+{
+  "user_id": "user123",
+  "item_id": "item_1",
+  "event_type": "click"
+}
+```
+### Example Request:
+```bash
+curl -X POST "http://127.0.0.1:8000/events" -H "Content-Type: application/json" -d '{
+  "user_id": "user123",
+  "item_id": "item_1",
+  "event_type": "click"
+}'
+```
+
+### Example Response:
+
+```bash
+{
+  "message": "Event recorded successfully"
+}
+```
+
+
