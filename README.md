@@ -144,4 +144,21 @@ curl -X POST "http://127.0.0.1:8000/events" -H "Content-Type: application/json" 
 }
 ```
 
+# Testing
+
+### Running Unit Tests
+To test your application locally, the project includes unit tests that ensure the core functionality works as expected.
+
+### **1. Run the tests using Pytest**
+ - Install pytest
+   ```bash
+   pip install pytest
+    ```
+
+- To run all tests, execute the following command in the project root directory:
+
+ ```bash
+    pytest -v
+ ```
+
 
