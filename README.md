@@ -18,7 +18,6 @@ This project provides a **Recommendation Service** built using **FastAPI**. It a
     - [POST /events](#post-events)
 4. [Testing](#testing)
     - [Running Unit Tests](#running-unit-tests)
-    - [Running Tests with Pytest](#running-tests-with-pytest)
 5. [Troubleshooting](#troubleshooting)
 6. [Future Enhancements](#future-enhancements)
 7. [License](#license)
@@ -29,7 +28,7 @@ This project provides a **Recommendation Service** built using **FastAPI**. It a
 - **Backend Framework**: FastAPI
 - **Programming Language**: Python
 - **Testing Framework**: Pytest
-- **Database**: In-memory simulation (can be replaced with an actual database for production)
+- **Database**: In-memory simulation (can be replaced with an actual database)
 - **API Testing**: Postman (or any HTTP client)
 
 ---
