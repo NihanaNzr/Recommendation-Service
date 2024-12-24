@@ -157,8 +157,43 @@ To test your application locally, the project includes unit tests that ensure th
 
 - To run all tests, execute the following command in the project root directory:
 
- ```bash
-    pytest -v
- ```
+     ```bash
+     pytest -v
+     ```
+
+## Troubleshooting
+
+If you encounter any errors during setup or testing, here are a few common solutions:
+
+### ModuleNotFoundError:
+- Ensure all dependencies are installed via `pip install -r requirements.txt`.
+- If using a virtual environment, ensure it is activated.
+
+### Failed Tests:
+- Check the error message and review the related code.
+- For issues with API endpoints, verify the endpoint URL and input data.
+
+---
+
+## Future Enhancements
+
+- **Database Integration**: Currently, the project uses in-memory simulation for the database. Future enhancements can include integration with an actual database like PostgreSQL or MongoDB.
+- **Authentication**: Add user authentication to personalize recommendations based on user history.
+- **Advanced Recommendation Algorithms**: Implement collaborative filtering or content-based recommendation systems.
+- **Deployment**: Deploy the service on a cloud platform such as AWS or Azure.
+- **Docker**: Containerize the application using Docker for easier deployment.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+Nihana Nizar
+
 
 
