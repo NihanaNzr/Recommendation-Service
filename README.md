@@ -43,3 +43,31 @@ Start by cloning the repository to your local system:
 ```bash
 git clone https://github.com/your-repository/recommendation-service.git
 cd recommendation-service
+```
+### **2. Create a virtual environment **
+
+It's recommended to use a virtual environment to manage dependencies for your project:
+For Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+For macOS/Linux:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+### ** 3. Install dependencies **
+Once inside the project folder and the virtual environment is activated, install the project dependencies:
+```bash
+pip install -r requirements.txt
+```
+The requirements.txt file should include all necessary dependencies like fastapi, uvicorn, pytest, etc.
+
+### **4. Run the application**
+To run the FastAPI application locally, use the following command:
+```bash
+uvicorn app.main:app --reload
+```
+
+The application will be available at [http://127.0.0.1:8000/docs].
